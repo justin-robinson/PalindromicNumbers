@@ -4,7 +4,7 @@ class PalindromicNumbers:
         self.decimal_number = decimal_number
 
     def _convert_decimal_to_base_recursion(self, quotient, base, based_array):
-        """Alogirthm to convert decimal to base by dividing quotient by base and collecting remainder recursively."""
+        """Algorithm to convert decimal to base by dividing quotient by base and collecting remainder recursively."""
         quotient, remainder = divmod(quotient, base)
         # insert into beginning to prevent reversing array later
         based_array.insert(0, int(remainder))
