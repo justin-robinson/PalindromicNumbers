@@ -14,6 +14,7 @@ class PalindromicNumbers:
 
     def convert_decimal_to_base(self, base):
         """Set up recursion to convert a decimal to the given base format."""
+        # TODO change array to a string which would prevent having to convert array to string later?
         based_array = []
         self._convert_decimal_to_base_recursion(self.decimal_number, base, based_array)
         return ''.join(map(str, based_array))
@@ -25,6 +26,7 @@ class PalindromicNumbers:
 
     def execute(self):
         """Increments base by 1 until the converted base value is a palindrome."""
+        # TODO add a time out to prevent infinite loops? -- look into possibility
         base = 2
         while True:
             based_value = self.convert_decimal_to_base(base)
