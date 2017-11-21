@@ -9,7 +9,11 @@ $ cd ./PalindromicNumbers
 ```
 
 ## Run Code:
-```python main.py```
+```bash
+$ python main.py
+```
 
 ## Run Tests:
-```python -m unittest -v test_palindromicNumbers```
+```bash
+$ python -m unittest -v test_palindromicNumbers
+```
