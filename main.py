@@ -1,4 +1,3 @@
-import sys
 import pandas as pd
 
 from PalindromicNumbers import PalindromicNumbers
@@ -14,16 +13,7 @@ def write_to_csv(data_set):
         print('\n%s. Please close and try again.' % err)
 
 
-def _get_upper_limit(upper_limit):
-    try:
-        return int(upper_limit[0])
-    except IndexError:
-        # no argument given
-        return 1000
-
-
-def main(upper_limit):
-    upper_limit = _get_upper_limit(upper_limit)
+def main(upper_limit=1000):
     data_set = []
     for decimal in range(1, upper_limit + 1):
         base = PalindromicNumbers(decimal).execute()
@@ -32,5 +22,5 @@ def main(upper_limit):
 
 
 if __name__ == '__main__':
-    main(upper_limit=sys.argv[1:])
+    main()
 
